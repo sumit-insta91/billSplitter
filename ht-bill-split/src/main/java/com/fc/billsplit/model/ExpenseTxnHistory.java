@@ -27,7 +27,7 @@ public class ExpenseTxnHistory {
 	private String desciption;
 	private Double amount;
 	@Column(length = 10)
-	private Integer mobile_no;
+	private String mobile_no;
 	
 	@Column(length = 10)
 	private Integer updated_by_mob_no;
@@ -38,7 +38,7 @@ public class ExpenseTxnHistory {
 	}
 	
 	public ExpenseTxnHistory(int id, GroupExpense groupExpense, String txn, String desciption, Double amount,
-			Integer mobile_no, Integer updated_by_mob_no, Date createdAt) {
+			String mobile_no, Integer updated_by_mob_no, Date createdAt) {
 		super();
 		this.id = id;
 		this.groupExpense = groupExpense;
@@ -80,10 +80,10 @@ public class ExpenseTxnHistory {
 	public void setAmount(Double amount) {
 		this.amount = amount;
 	}
-	public Integer getMobile_no() {
+	public String getMobile_no() {
 		return mobile_no;
 	}
-	public void setMobile_no(Integer mobile_no) {
+	public void setMobile_no(String mobile_no) {
 		this.mobile_no = mobile_no;
 	}
 	public Integer getUpdated_by_mob_no() {
