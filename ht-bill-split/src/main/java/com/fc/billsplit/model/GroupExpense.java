@@ -32,7 +32,7 @@ public class GroupExpense {
 	private String userName;
 	
 	@Column(length = 10)
-	private int mobileNo;
+	private String mobileNo;
 	
 	private Double amount;
 	private String isAdmin;
@@ -45,7 +45,7 @@ public class GroupExpense {
 	}
 	
 	
-	public GroupExpense(int id, UserGroup userGroupId, String userName, int mobileNo, Double amount, String isAdmin,
+	public GroupExpense(int id, UserGroup userGroupId, String userName, String mobileNo, Double amount, String isAdmin,
 			String metadata, Date createdAt, Date updateAt) {
 		super();
 		this.id = id;
@@ -78,10 +78,10 @@ public class GroupExpense {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	public int getMobileNo() {
+	public String getMobileNo() {
 		return mobileNo;
 	}
-	public void setMobileNo(int mobileNo) {
+	public void setMobileNo(String mobileNo) {
 		this.mobileNo = mobileNo;
 	}
 	public Double getAmount() {
